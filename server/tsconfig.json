@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "outDir": "build",
+    "noEmitHelpers": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "sourceMap": false
+  }
+}

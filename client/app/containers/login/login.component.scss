@@ -1,0 +1,150 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.login {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  width: 400px;
+  height: 300px;
+  box-shadow: 0 2px 4px rgba(53, 60, 72, 0.1);
+  padding: 20px 50px;
+  border-radius: 2px;
+
+  &__title {
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  &__form {
+    margin-top: 30px;
+  }
+
+  &__error {
+    display: block;
+    background: #E62163;
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px 7px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(10px, -50%);
+    white-space: nowrap;
+
+    &:before {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 5px 0;
+      border-color: transparent #E62163 transparent transparent;
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: -5px;
+    }
+  }
+
+  &__field {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  input {
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 10px 15px;
+    color: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    &:focus {
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+    &.ng-invalid.ng-touched {
+      border-color: #E62163;
+    }
+  }
+
+  &__button {
+    text-align: center;
+  }
+
+  button {
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    background-color: #9d62c8;
+    outline: 0;
+    line-height: 1;
+    text-align: center;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 2px;
+    display: inline-block;
+    border: none;
+    color: #fff;
+    transition: background-color .3s, box-shadow .3s;
+
+    &:hover {
+      background-color: #a46dcc;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:disabled {
+      background: rgba(0, 0, 0, 0.2);
+      color: rgba(0, 0, 0, 0.4);
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
+}
+
+.login-background {
+  background: #f8f8ff;
+  transform: skew(0, -3.5deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 40%;
+
+  &__gradient {
+    transform: skew(0,-1.5deg);
+    background-image: linear-gradient(to bottom right,#ac5cc5,#834fc7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    overflow: hidden;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  &__shields {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: -70px;
+    width: 94%;
+    max-width: 1140px;
+    transform: translate3d(-50%, 0, 0) skew(0, 5deg);
+    background: url(https://ultimateangular.com/assets/img/homepage/shields--featured.svg) no-repeat center bottom 20px;
+  }
+}

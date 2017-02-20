@@ -1,0 +1,146 @@
+:host, .header {
+  display: flex;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 16px 24px 0 rgba(60, 71, 81, 0.1);
+  height: 95px;
+  z-index: 99999;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    position: static;
+    max-width: 1140px;
+    width: 94%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+.logo {
+  overflow: hidden;
+  text-indent: -160px;
+  display: inline-block;
+  &__image {
+    width: 148px;
+    height: 50px;
+    margin-top: -20px;
+    display: block
+  }
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  color: #6a7589;
+  height: 100%;
+
+  &__list {
+    display: flex;
+    margin: 0 -20px 0 0;
+    padding: 0;
+    width: inherit;
+  }
+
+  &__item {
+    margin-left: 10px;
+    position: relative;
+    list-style: none;
+
+    &--divider {
+      padding-left: 15px;
+      margin-left: 15px;
+      .nav__link:before {
+        content: ' ';
+        width: 1px;
+        left: 0;
+        height: 20px;
+        background: rgba(0, 0, 0, 0.1);
+        position: absolute;
+      }
+    }
+
+    &:hover {
+      color: #2e3746;
+
+      .dropdown {
+        transform: translate3d(-50%, 10px, 0) rotateX(0);
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    padding: 0 15px;
+    font: {
+      size: 15px;
+      weight: 500;
+    }
+    color: inherit;
+    .nav--primary & {
+      padding: 14px 0;
+      &:hover {
+        background-color: #363c48;
+        color: white;
+      }
+    }
+
+    &--active {
+      color: #9967DD;
+      &:hover {
+        color: #9967DD;
+      }
+    }
+    svg {
+      position: relative;
+      top: 2px;
+      margin-right: 6px;
+    }
+    .nav--primary & {
+      width: 25%;
+    }
+    &--login-button {
+      background-color: #9967DD;
+      color: #fff;
+    }
+  }
+}
+
+.award {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 20px;
+  padding: 0 0 0 35px;
+  font-size: 11px;
+  font-weight: 500;
+  a {
+    color: #7f95b5;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: darken(#7f95b5, 15%);
+    }
+  }
+  img {
+    width: 30px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  p {
+    margin: 0;
+  }
+  &__title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}

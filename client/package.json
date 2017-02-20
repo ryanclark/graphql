@@ -1,0 +1,41 @@
+{
+  "name": "platform-client",
+  "version": "1.0.0",
+  "author": "Ultimate Angular",
+  "license": "MIT",
+  "scripts": {
+    "app": "ngc -p tsconfig.json",
+    "setup": "webpack --config vendor/webpack.config.js",
+    "dev": "NODE_ENV=development yarn run build:dev",
+    "build": "NODE_ ENV=production webpack -p",
+    "build:dev": "webpack-dev-server --inline --hot"
+  },
+  "devDependencies": {
+    "@angular/platform-browser-dynamic": "4.0.0-beta.7",
+    "@angular/platform-server": "4.0.0-beta.7",
+    "@types/core-js": "0.9.35",
+    "@types/mqtt": "^0.0.33",
+    "@types/node": "7.0.4",
+    "node-sass": "4.5.0",
+    "raw-loader": "0.5.1",
+    "sass-loader": "4.1.1",
+    "typescript": "2.1.6",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.2.0"
+  },
+  "dependencies": {
+    "@angular/common": "4.0.0-beta.7",
+    "@angular/compiler": "4.0.0-beta.7",
+    "@angular/compiler-cli": "4.0.0-beta.7",
+    "@angular/core": "4.0.0-beta.7",
+    "@angular/forms": "4.0.0-beta.7",
+    "@angular/http": "4.0.0-beta.7",
+    "@angular/platform-browser": "4.0.0-beta.7",
+    "@angular/router": "4.0.0-beta.7",
+    "core-js": "2.4.1",
+    "mqtt": "^2.4.0",
+    "rxjs": "5.0.3",
+    "tslib": "1.5.0",
+    "zone.js": "0.7.6"
+  }
+}

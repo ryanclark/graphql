@@ -1,0 +1,10 @@
+.home {
+  background: #fff;
+  font-size: 18px;
+  font-family: Verdana;
+  text-decoration: underline;
+  &__test {
+    background: #ff0000;
+    display: block;
+  }
+}
